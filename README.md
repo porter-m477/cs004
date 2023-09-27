@@ -10,7 +10,7 @@ Necesitará una cuenta de GitHub. Si no tiene uno, puede registrarse de forma gr
 También necesitarás tener Git instalado en tu computadora. Puede descargar Git desde git-scm.com.
 Clonar el repositorio Para comenzar con el repositorio, debe clonarlo en su máquina local. Para hacer esto, siga estos pasos:
 
-Vaya a la página del repositorio en GitHub en https://github.com/porter-m477/cs002.git.
+Vaya a la página del repositorio en GitHub en https://github.com/porter-m477/cs004.git.
 Haga clic en el botón "Clonar o descargar" en el lado derecho de la página.
 Copie la URL que aparece en el cuadro.
 Abra una terminal o símbolo del sistema en su computadora.

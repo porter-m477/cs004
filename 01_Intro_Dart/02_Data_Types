@@ -1,0 +1,19 @@
+void main() {
+  
+  final String carro = "Toyota";
+  final int personas = 100;
+  final bool isOpen = true;
+//   bool? isOpen; //isOpen puede ser true,false o NULL
+//   final detalles = <String>["azul"];
+  final List<String>detalles = ["azul"];
+  final tipo = <String>['name.txt', 'name.jpg'];
+  
+  
+  print("""
+  $carro
+  $personas
+  $isOpen
+  $detalles
+  $tipo
+  """);
+}

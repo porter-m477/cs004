@@ -1,0 +1,16 @@
+void main (){
+  
+//   var myName = "Matt";
+//   String myName = 'Matt';
+//   Late Final myName;
+  const myName = "Matt"; //variable se asigna en tiempo de construccion
+  
+//   final myName = "Matt"; variable se asigna en tiempo de ejecucion
+  
+  print('Hola $myName');
+  
+  print('Hola ${myName.toUpperCase()}');
+  
+  print('${2+2}');
+  
+}

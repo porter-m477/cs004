@@ -18,9 +18,7 @@ void main() {
     3: 'FRE',
   };
   
-  print(carro);
-  print(carros);
-  
+
   print(carro['submapa'][2]); // extraemos el valor 2 del submapa
   
   

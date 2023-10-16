@@ -1,0 +1,33 @@
+void main () {
+  
+  final mySquare = Square( side: 8);
+  
+  mySquare.side = 5;
+  
+  print('area = ${mySquare.area}');
+  
+}
+
+
+class Square {
+  
+ double _side; //lado al cuadrado
+  
+  Square({required double side})
+    : _side = side;
+  
+  double get area {
+    return _side * _side;
+  }
+  
+  set side( double value) {
+    print('nuevo val $value');
+    if (value < 0) throw 'Debe ser mayor a cero';
+    
+    _side = value;
+  }
+  
+  double calculator() {
+    return _side * _side;
+  }
+}

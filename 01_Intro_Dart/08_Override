@@ -1,0 +1,30 @@
+void main() {
+  
+  final work = Celular(marca: 'Samsung', cpu:'Snap');
+  
+  print (work);
+  print (work.marca);
+  print (work.cpu);
+}
+
+class Celular {
+  String? marca;
+  String? cpu;
+  
+  Celular( {
+    required this.marca, 
+    required this.cpu});
+//   Celular( String cMarca, String cCpu){
+//     marca = cMarca;
+//     cpu = cCpu;
+//   }
+  
+  @override
+  String toString() {
+    return '$marca - $cpu';
+  }
+  
+  
+}
+
+

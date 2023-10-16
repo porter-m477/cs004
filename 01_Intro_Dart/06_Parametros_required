@@ -1,0 +1,50 @@
+void main (){
+  print (holaPersona(name:'aa', message:'b'));
+}
+
+// String holaEveryone() {
+//   return "hola a todos";
+// }
+
+// String holaEveryone() =>"hola a todos";
+
+// String holaEveryone() =>{
+//   return "hola a todos";
+// };
+
+// int addNumbers (int a, [int? b, int? c]) {
+  
+//   b = b ?? 0;
+//   b = b +1;
+  
+//   b ??= 0;
+//   b++;
+//   return a+b;
+// }
+
+// String holaPersona( String name, String message) {
+  
+//   return "Hola, $name : $message";
+// }
+
+// void main (){
+//   print (holaPersona(name:'aa', message:'b'));
+// }
+
+//ejemplo de parametros no auto-posicionados
+
+String holaPersona( {required String name, required String message}) {
+  
+  return "Hola, $name : $message"; //require especificar cual parametro se esta entrando
+}
+
+
+
+
+
+
+
+
+
+
+

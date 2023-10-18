@@ -1,0 +1,19 @@
+void main() {
+  
+  final work = new Celular('Samsung','Snap');
+  
+  print (work);
+}
+
+class Celular {
+  String? marca;
+  String? cpu;
+  
+  Celular( this.marca, this.cpu);
+  // Inicializacion abreviada
+//   Celular( String cMarca, String cCpu){
+//     marca = cMarca;
+//     cpu = cCpu;
+//   }
+  
+}

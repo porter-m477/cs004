@@ -1,0 +1,51 @@
+void main() {
+  
+  final Map<String, dynamic> rawData = {
+    'name': 'Apple',
+    'phone': 'A17',
+    'isAlive': true
+  };
+  
+  final casa = Celular.fromRaw(rawData); //Constructor por nombre
+  
+//   final casa = Celular(
+//     isAlive: true,
+//     marca: 'Apple',
+//     cpu: 'A17'
+//   );
+  
+//   final casa = Celular(
+//     isAlive: rawData['isAlive'] ?? false,
+//     marca: 'Apple',
+//     cpu: 'A17'
+//   );
+  
+  print (casa);
+}
+
+
+class Celular {
+  
+  String marca;
+  String cpu;
+  bool isAlive;
+  
+  Celular({
+    required this.marca,
+    required this.cpu,
+    required this.isAlive
+  }
+  
+  );
+  
+  Celular.fromRaw( Map<String,dynamic> rawData) 
+    : marca = rawData['name'] ?? 'Sin marca',
+      cpu = rawData['phone'] ?? 'Sin CPU',
+      isAlive = rawData['isAlive'] ?? 'No found';
+  
+  @override
+  String toString() {
+    return '$marca, $cpu, LiveFlag: ${ isAlive ? 'YES!' : 'No'}';
+  }
+}
+

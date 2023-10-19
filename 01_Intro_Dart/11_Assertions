@@ -1,0 +1,34 @@
+void main () {
+  
+  final mySquare = Square( side: -8); //Valor menor a cero controlado
+  
+//   mySquare.side = 5;
+  
+  print('area = ${mySquare.area}');
+  
+}
+
+
+class Square {
+  
+ double _side; //lado al cuadrado
+  
+  Square({required double side})
+    : assert(side >= 0, 'debe ser valor positivo'),//Assesion AQUI
+  _side = side;
+  
+  double get area {
+    return _side * _side;
+  }
+  
+  set side( double value) {
+    print('nuevo val $value');
+    if (value < 0) throw 'Debe ser mayor a cero';
+    
+    _side = value;
+  }
+  
+  double calculator() {
+    return _side * _side;
+  }
+}

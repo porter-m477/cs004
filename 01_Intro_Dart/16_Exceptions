@@ -1,0 +1,25 @@
+void main () {
+  
+  print('Inicio del programa');
+  
+  httpGet('https://galileo.edu/api')
+    .then(
+      (value) {
+    
+    print(value);
+      });
+  
+  print ('Fin');
+  
+}
+
+Future<String> httpGet(String url){
+  
+  return Future.delayed (const Duration(seconds: 1), (){
+    
+    throw 'Error en la peticion http';
+    
+//     return 'Respuesta a la peticion http';
+  });
+  
+}

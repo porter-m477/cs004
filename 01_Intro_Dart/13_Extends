@@ -1,0 +1,56 @@
+//Utilizacion de clases abstractas y Extends para utilizar 'moldes' y crear nuevas plantas de energia
+
+void main () {
+  
+  final windPlant = WindPlant(initialEnergy: 5);
+  
+  print('wind: ${ carCharger(windPlant)}');
+  
+}
+
+
+//puedo crear mas plantas y controlar su capacidad
+double carCharger ( EnergyPlant plant ) {
+  
+  if (plant.energiaRestante < 20 ) {
+    throw Exception("Baja energia");
+  }
+  return plant.energiaRestante - 20;
+}
+
+enum PlantType { nuclear, wind, water } 
+
+abstract class EnergyPlant {
+  
+  double energiaRestante;
+  PlantType type; 
+  
+  EnergyPlant({
+    required this.energiaRestante, 
+    required this.type });
+  
+  void consumeEnergy( double amount );
+
+}
+
+
+// Extends o Implements
+// diferencias:
+
+class WindPlant extends EnergyPlant {
+  
+  WindPlant({required double initialEnergy})
+    : super(energiaRestante:  initialEnergy, type: PlantType.wind);
+  
+  @override
+  void consumeEnergy (double amount) {
+    energiaRestante -= amount; //controlado por la clase abstracta
+  }
+}
+
+
+
+
+
+
+

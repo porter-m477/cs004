@@ -1,0 +1,21 @@
+void main () {
+  
+  final nuclearPlant = EnergyPlant();
+}
+
+enum PlantType { nuclear, wind, water } // Implemntacion clase abstracta desde aqui
+
+abstract class EnergyPlant {
+  
+  double energiaRestante;
+  PlantType? type; // controla el 'NullSafety' con (?)
+  
+  EnergyPlant({
+    required this.energiaRestante, 
+    required this.type });
+  
+  void consumeEnergy( double amount );//va a haber un metodo llamado xx que no rergesa nada
+  // cumple que sea double   // Implementacion clase abstracta hasta aqui
+
+
+}

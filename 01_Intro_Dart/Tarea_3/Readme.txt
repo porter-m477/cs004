@@ -1,0 +1,45 @@
+Tarea 3.. completar los mixins de los animales que faltan
+y leer el articulo sobre mixins
+abstract class Animal {}
+
+abstract class Mamifero extends Animal {}
+
+abstract class Aves extends Animal {}
+
+abstract class Pez extends Animal {}
+
+
+mixin class Volar {
+  void volar() => print('puede volar');
+}
+
+mixin class Caminar {
+  void caminar() => print('puede caminar');
+}
+
+mixin class Nadar {
+  void nadar() => print('puede nadar');
+}
+
+
+//Utilizando la idea del Mixin
+class Delfin extends Mamifero with Nadar {} //Palabra clave WITH asociarla con MIXINS
+class Bat extends Mamifero with Caminar, Volar {} // Mixin - tipo de especializacion
+class Pato extends Mamifero with Caminar, Volar, Nadar {}
+
+// class Dove{}   Para tarea
+// class Tiburon{}
+// class PezVolador{}
+
+void main (){
+  
+  final donald = Delfin();
+//   donald.volar();
+  donald.nadar();
+  
+  //final paloma = Dove();
+  //final tiburon = Tiburon{};
+  //final pezVolador = PezVolador{};
+  
+}
+

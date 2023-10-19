@@ -1,0 +1,20 @@
+void main (){
+  print (addNumbers(5,8));
+}
+
+//String holaEveryone(){
+//  return "Hola a todos";
+//}
+
+//String holaEveryone1() => "Hola a Todos";
+
+// String holaEveryone2() {
+//   return "hola a todos"
+// }
+
+// int addNumbers (int a,int b){
+//   return a+b;
+// }
+
+
+int addNumbers (int a,int b) => a+b;

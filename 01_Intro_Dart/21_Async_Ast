@@ -1,0 +1,19 @@
+void main () {
+  
+  genNum().listen((int value) {
+    print ('Stream value: $value');
+    
+  });
+  
+}
+
+Stream<int> genNum() async* {
+  
+  final valuesGen = [1,2,3,4,5];
+  
+  for( int i in valuesGen) {
+    await Future.delayed( const Duration(seconds:1));
+    yield i;
+  }
+  
+}

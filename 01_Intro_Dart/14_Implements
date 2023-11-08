@@ -1,0 +1,71 @@
+//Implements solo implementa metodos especificos
+//Extends extiende todos los metodos de la clase
+void main () {
+  
+  final windPlant = WindPlant(initialEnergy: 55);
+  final nuclearPlant = NuclearPlant( energiaRestante: 5); //imprime error de baja capacidad
+  
+  print('wind: ${ carCharger(windPlant)}');
+  print('nuclear: ${ carCharger(nuclearPlant)}');
+  
+}
+
+
+double carCharger ( EnergyPlant plant ) {
+  
+  if (plant.energiaRestante < 20 ) {
+    throw Exception("Baja energia");
+  }
+  return plant.energiaRestante - 20;
+}
+
+enum PlantType { nuclear, wind, water } 
+
+abstract class EnergyPlant {
+  
+  double energiaRestante;
+  final PlantType type; 
+  
+  EnergyPlant({
+    required this.energiaRestante, 
+    required this.type });
+  
+  void consumeEnergy( double amount ); //solo esta siendo declarada
+
+}
+
+
+class WindPlant extends EnergyPlant {
+  
+  WindPlant({required double initialEnergy})
+    : super(energiaRestante:  initialEnergy, type: PlantType.wind);
+  
+  @override
+  void consumeEnergy (double amount) {
+    energiaRestante -= amount; //controlado por la clase abstracta
+  }
+}
+
+
+// Implements
+
+class NuclearPlant implements EnergyPlant {
+  
+  double energiaRestante;
+  final PlantType type = PlantType.nuclear;
+  
+  NuclearPlant ({ required this.energiaRestante});
+  
+  @override
+  void consumeEnergy (double amount) {
+    energiaRestante -= (amount*0.2); //controlado por la clase abstracta
+  }
+  
+}
+
+
+
+
+
+
+

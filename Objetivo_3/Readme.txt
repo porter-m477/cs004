@@ -5,5 +5,5 @@ A partir de la App que Flutter nos da como base:
     Muestra un numero y este se incrementa cuando le da click a (+).
 Aumentar otro boton que reste una unidad cuando se le da click.
 
-Apoyarse del prototipo que esta en el directorio /Objetivo_3/src/ContadorDeCliuck.png 
+Apoyarse del prototipo que esta en el directorio /Objetivo_3/src/ContadorDeClick.png 
 para crear su aplicacion.

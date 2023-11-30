@@ -2,6 +2,11 @@ import "package:app2/presentation/widgets/chat/message_bubble.dart";
 import "package:app2/presentation/widgets/chat/reply_mesage_bubble.dart";
 import "package:app2/presentation/widgets/shared/chat_box.dart";
 import "package:flutter/material.dart";
+import "package:provider/provider.dart";
+
+import "../../../domain/entities/message.dart";
+import "../../providers/chat_provider.dart";
+
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -31,6 +36,9 @@ class _ChatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final chatProvider = context.watch<ChatProvider>();
+
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric( horizontal:  10),
@@ -38,11 +46,14 @@ class _ChatView extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: 50,
+                itemCount: chatProvider.message.length,
                 itemBuilder: (context ,index) {
-                return ( index % 2 == 0 ) //funcion para alternar los mensajes
-                  ? const ReplyMessage()
-                  :const MessageBubble();
+                  final message = chatProvider.message[index];
+
+                  return ( message.desdeQuien == DesdeQuien.externo)
+                  ? ReplyMessage()
+                  : MessageBubble();
+
               },)
             ),
             //Chatbox

@@ -24,6 +24,7 @@ class _ChatScreenState extends State<ChatScreen> {
           child: CircleAvatar(
             backgroundImage: NetworkImage(
                 'https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg'),
+                //'https://iconos8.es/icon/XTk8kozwO49R/burbuja-de-di%C3%A1logo-con-puntos'),
           ),
         ),
         title: const Padding(

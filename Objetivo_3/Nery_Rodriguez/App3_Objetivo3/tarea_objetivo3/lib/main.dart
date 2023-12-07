@@ -148,12 +148,12 @@ class _MyHomePageState extends State<MyHomePage> {
                FloatingActionButton.extended(
               onPressed: _incrementCounter,
               tooltip: 'Increment',
-              icon: Icon(Icons.add),
+              icon: const Icon(Icons.add),
               label: const Text("1"),
             ),
                FloatingActionButton.extended(
               onPressed: _decrementCounter,
-              icon: Icon(Icons.remove),
+              icon: const Icon(Icons.remove),
               tooltip: 'Decrement',
               label: const Text("1"),
             ),
